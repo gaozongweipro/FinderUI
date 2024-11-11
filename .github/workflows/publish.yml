@@ -2,8 +2,9 @@ name: Publish Package
 
 on:
   push:
-    tags:
+    branches:
       - main 
+  workflow_dispatch:
 
 jobs:
   test:
