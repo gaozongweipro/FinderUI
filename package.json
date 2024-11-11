@@ -6,11 +6,11 @@
 
   "description": "My Vue 3 component library based on Element Plus",
 
+  "type": "module",
+
   "main": "dist/findUI.umd.js",
 
   "module": "dist/findUI.es.js",
-
-  "types": "dist/types/index.d.ts",
 
   "files": [
 
@@ -26,8 +26,6 @@
 
     "build": "vite build",
 
-    "build:style": "vite build --config vite.style.config.js",
-
     "preview": "vite preview",
 
     "test": "vitest",
@@ -42,11 +40,7 @@
 
     "prepare": "husky install",
 
-    "release": "semantic-release",
-
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-
-    "format": "prettier --write src/"
+    "release": "semantic-release"
 
   },
 
@@ -74,7 +68,7 @@
 
   "devDependencies": {
 
-    "@vitejs/plugin-vue": "^4.5.0",
+    "@vitejs/plugin-vue": "^5.0.0",
 
     "@vue/test-utils": "^2.4.0",
 
@@ -108,15 +102,7 @@
 
     "prettier": "^3.0.0",
 
-    "sass": "^1.0.0",
-
-    "@rollup/plugin-node-resolve": "^15.0.0",
-
-    "@rollup/plugin-commonjs": "^25.0.0",
-
-    "@rollup/rollup-linux-x64-gnu": "4.6.1",
-
-    "rollup": "^4.6.0"
+    "sass": "^1.0.0"
 
   },
 
