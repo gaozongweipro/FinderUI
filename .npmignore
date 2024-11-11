@@ -1,0 +1,14 @@
+.github/
+.husky/
+docs/
+examples/
+test/
+.commitlintrc.js
+.eslintrc.js
+.prettierrc
+.releaserc.js
+vite.config.js
+vite.style.config.js
+*.config.js
+.gitignore
+coverage/ 

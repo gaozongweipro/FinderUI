@@ -1,0 +1,21 @@
+:root {
+  --vp-c-brand: #409eff;
+  --vp-c-brand-light: #79bbff;
+  --vp-c-brand-dark: #337ecc;
+}
+
+.demo-block {
+  padding: 1rem;
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+.demo-block .el-button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.demo-block .el-button + .el-button {
+  margin-left: 0;
+} 
