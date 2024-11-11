@@ -1,16 +1,14 @@
-import MyButton from './button'
-
-const components = [MyButton]
-
-const install = app => {
-  components.forEach(component => {
-    app.use(component)
-  })
-}
-
-export { MyButton, install }
-
-export default { install }
-
-
-
+import MyButton from './button'
+import BasicTable from './table'
+
+const components = [MyButton, BasicTable]
+
+const install = app => {
+  components.forEach(component => {
+    app.use(component)
+  })
+}
+
+export { MyButton, BasicTable, install }
+
+export default { install }

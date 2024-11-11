@@ -1,6 +1,6 @@
 {
 
-  "name": "find-ui",
+  "name": "@gaozongweipro/find-ui",
 
   "version": "1.0.0",
 
@@ -116,7 +116,9 @@
 
   "publishConfig": {
 
-    "access": "public"
+    "access": "public",
+
+    "registry": "https://registry.npmjs.org/"
 
   },
 
