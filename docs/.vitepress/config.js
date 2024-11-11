@@ -8,7 +8,7 @@ export default defineConfig({
     nav: [
       { text: '指南', link: '/guide/installation' },
       { text: '组件', link: '/components/button' },
-      { text: 'GitHub', link: 'https://github.com/your-username/my-component-lib' }
+      { text: 'GitHub', link: 'https://github.com/gaozongweipro/FinderUI' }
     ],
     sidebar: {
       '/guide/': [
@@ -33,7 +33,7 @@ export default defineConfig({
       copyright: 'Copyright © 2024-present Your Name'
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/your-username/my-component-lib' }
+      { icon: 'github', link: 'https://github.com/gaozongweipro/FinderUI' }
     ]
   }
 }) 

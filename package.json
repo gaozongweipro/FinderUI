@@ -1,88 +1,175 @@
-{
-  "name": "my-component-lib",
-  "version": "1.0.0",
-  "description": "My Vue 3 component library based on Element Plus",
-  "main": "dist/my-component-lib.umd.js",
-  "module": "dist/my-component-lib.es.js",
-  "types": "dist/types/index.d.ts",
-  "files": [
-    "dist",
-    "src"
-  ],
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "build:style": "vite build --config vite.style.config.js",
-    "preview": "vite preview",
-    "test": "vitest",
-    "test:coverage": "vitest run --coverage",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs",
-    "prepare": "husky install",
-    "release": "semantic-release",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
-  },
-  "keywords": [
-    "vue3",
-    "component-library",
-    "element-plus"
-  ],
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "element-plus": "^2.4.0",
-    "vue": "^3.3.0"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^4.5.0",
-    "@vue/test-utils": "^2.4.0",
-    "vite": "^5.0.0",
-    "vitest": "^1.0.0",
-    "jsdom": "^22.1.0",
-    "@vitest/coverage-v8": "^1.0.0",
-    "vitepress": "^1.0.0",
-    "markdown-it": "^13.0.0",
-    "@commitlint/cli": "^17.0.0",
-    "@commitlint/config-conventional": "^17.0.0",
-    "@semantic-release/changelog": "^6.0.0",
-    "@semantic-release/git": "^10.0.0",
-    "husky": "^8.0.0",
-    "semantic-release": "^21.0.0",
-    "eslint": "^8.0.0",
-    "eslint-plugin-vue": "^9.0.0",
-    "prettier": "^3.0.0",
-    "sass": "^1.0.0"
-  },
-  "peerDependencies": {
-    "vue": "^3.3.0",
-    "element-plus": "^2.4.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/your-username/my-component-lib"
-  },
-  "bugs": {
-    "url": "https://github.com/your-username/my-component-lib/issues"
-  },
-  "homepage": "https://github.com/your-username/my-component-lib#readme"
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+{
+
+  "name": "findUI",
+
+  "version": "1.0.0",
+
+  "description": "My Vue 3 component library based on Element Plus",
+
+  "main": "dist/findUI.umd.js",
+
+  "module": "dist/findUI.es.js",
+
+  "types": "dist/types/index.d.ts",
+
+  "files": [
+
+    "dist",
+
+    "src"
+
+  ],
+
+  "scripts": {
+
+    "dev": "vite",
+
+    "build": "vite build",
+
+    "build:style": "vite build --config vite.style.config.js",
+
+    "preview": "vite preview",
+
+    "test": "vitest",
+
+    "test:coverage": "vitest run --coverage",
+
+    "docs:dev": "vitepress dev docs",
+
+    "docs:build": "vitepress build docs",
+
+    "docs:preview": "vitepress preview docs",
+
+    "prepare": "husky install",
+
+    "release": "semantic-release",
+
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+
+    "format": "prettier --write src/"
+
+  },
+
+  "keywords": [
+
+    "vue3",
+
+    "component-library",
+
+    "element-plus"
+
+  ],
+
+  "author": "",
+
+  "license": "MIT",
+
+  "dependencies": {
+
+    "element-plus": "^2.4.0",
+
+    "vue": "^3.3.0"
+
+  },
+
+  "devDependencies": {
+
+    "@vitejs/plugin-vue": "^4.5.0",
+
+    "@vue/test-utils": "^2.4.0",
+
+    "vite": "^5.0.0",
+
+    "vitest": "^1.0.0",
+
+    "jsdom": "^22.1.0",
+
+    "@vitest/coverage-v8": "^1.0.0",
+
+    "vitepress": "^1.0.0",
+
+    "markdown-it": "^13.0.0",
+
+    "@commitlint/cli": "^17.0.0",
+
+    "@commitlint/config-conventional": "^17.0.0",
+
+    "@semantic-release/changelog": "^6.0.0",
+
+    "@semantic-release/git": "^10.0.0",
+
+    "husky": "^8.0.0",
+
+    "semantic-release": "^21.0.0",
+
+    "eslint": "^8.0.0",
+
+    "eslint-plugin-vue": "^9.0.0",
+
+    "prettier": "^3.0.0",
+
+    "sass": "^1.0.0"
+
+  },
+
+  "peerDependencies": {
+
+    "vue": "^3.3.0",
+
+    "element-plus": "^2.4.0"
+
+  },
+
+  "publishConfig": {
+
+    "access": "public"
+
+  },
+
+  "repository": {
+
+    "type": "git",
+
+    "url": "https://github.com/gaozongweipro/"
+
+  },
+
+  "bugs": {
+
+    "url": "https://github.com/gaozongweipro/FinderUI/issues"
+
+  },
+
+  "homepage": "https://github.com/gaozongweipro/FinderUI#readme"
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
