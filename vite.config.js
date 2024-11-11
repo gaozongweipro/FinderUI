@@ -38,7 +38,7 @@ export default defineConfig({
 
       name: 'FindUI',
 
-      fileName: format => `findUI.${format}.js`
+      fileName: format => `find-ui.${format}.js`
 
     },
 
