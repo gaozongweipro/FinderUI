@@ -10,7 +10,7 @@ hero:
       link: /guide/installation
     - theme: alt
       text: 在 GitHub 上查看
-      link: https://github.com/your-username/my-component-lib
+      link: https://github.com/gaozongweipro/FinderUI
 
 features:
   - icon: ⚡️

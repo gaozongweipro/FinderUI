@@ -8,23 +8,19 @@ export default defineConfig({
     nav: [
       { text: '指南', link: '/guide/installation' },
       { text: '组件', link: '/components/button' },
-      { text: 'GitHub', link: 'https://github.com/your-username/my-component-lib' }
+      { text: 'GitHub', link: 'https://github.com/gaozongweipro/FinderUI' }
     ],
     sidebar: {
       '/guide/': [
         {
           text: '指南',
-          items: [
-            { text: '安装', link: '/guide/installation' }
-          ]
+          items: [{ text: '安装', link: '/guide/installation' }]
         }
       ],
       '/components/': [
         {
           text: '基础组件',
-          items: [
-            { text: 'Button 按钮', link: '/components/button' }
-          ]
+          items: [{ text: 'Button 按钮', link: '/components/button' }]
         }
       ]
     },
@@ -32,8 +28,6 @@ export default defineConfig({
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2024-present Your Name'
     },
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/your-username/my-component-lib' }
-    ]
+    socialLinks: [{ icon: 'github', link: 'https://github.com/gaozongweipro/FinderUI' }]
   }
-}) 
+})
