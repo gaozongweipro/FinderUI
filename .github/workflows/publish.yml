@@ -3,7 +3,8 @@ name: Publish
 on:
   push:
     branches:
-      - master 
+      - master
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -15,8 +16,11 @@ jobs:
         with:
           node-version: '18'
           
-      - name: Install dependencies
-        run: npm ci
+      - name: Clean install dependencies
+        run: |
+          rm -rf node_modules
+          rm -f package-lock.json
+          npm install
         
       - name: Run tests
         run: npm test
@@ -32,8 +36,11 @@ jobs:
         with:
           node-version: '18'
           
-      - name: Install dependencies
-        run: npm ci
+      - name: Clean install dependencies
+        run: |
+          rm -rf node_modules
+          rm -f package-lock.json
+          npm install
         
       - name: Build package
         run: npm run build
@@ -59,6 +66,12 @@ jobs:
           node-version: '18'
           registry-url: 'https://registry.npmjs.org'
           
+      - name: Clean install dependencies
+        run: |
+          rm -rf node_modules
+          rm -f package-lock.json
+          npm install
+          
       - name: Download build artifacts
         uses: actions/download-artifact@v3
         with:
@@ -81,8 +94,11 @@ jobs:
         with:
           node-version: '18'
           
-      - name: Install dependencies
-        run: npm ci
+      - name: Clean install dependencies
+        run: |
+          rm -rf node_modules
+          rm -f package-lock.json
+          npm install
         
       - name: Build docs
         run: npm run docs:build
@@ -90,5 +106,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
-          publish_dir: docs/.vitepress/dist 
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/.vitepress/dist
