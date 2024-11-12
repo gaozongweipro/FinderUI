@@ -320,7 +320,7 @@ import {
   watch,
 } from "vue";
 import PaginationAll from "../../pagination/src/pagination.vue";
-import { transformObjectKey } from "@/utils/index.js";
+import { transformObjectKey } from '../../../utils/index.js'
 
 const emit = defineEmits(["rowClick", "changePageSize", "changePageNum"]);
 const props = defineProps(["tableConfig"]);
