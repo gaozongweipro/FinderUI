@@ -1,14 +1,14 @@
-import MyButton from './button'
-import BasicTable from './table'
-
-const components = [MyButton, BasicTable]
+const components = import.meta.glob('./*/index.js', { eager: true })
 
 const install = app => {
-  components.forEach(component => {
-    app.use(component)
+  Object.values(components).forEach(componentModule => {
+    const component = componentModule.default
+    if (component && component.name) {
+      app.component(component.name, component)
+    }
   })
 }
 
-export { MyButton, BasicTable, install }
-
-export default { install }
+export default {
+  install
+}
