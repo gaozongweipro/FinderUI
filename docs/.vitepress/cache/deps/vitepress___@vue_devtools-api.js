@@ -3260,6 +3260,9 @@ var DevToolsV6PluginAPI = class {
   // component inspector
   notifyComponentUpdate(instance) {
     var _a25;
+    if (devtoolsState.highPerfModeEnabled) {
+      return;
+    }
     const inspector = getActiveInspectors().find((i) => i.packageName === this.plugin.descriptor.packageName);
     if (inspector == null ? void 0 : inspector.id) {
       if (instance) {
@@ -3287,9 +3290,15 @@ var DevToolsV6PluginAPI = class {
     }
   }
   sendInspectorTree(inspectorId) {
+    if (devtoolsState.highPerfModeEnabled) {
+      return;
+    }
     this.hooks.callHook("sendInspectorTree", { inspectorId, plugin: this.plugin });
   }
   sendInspectorState(inspectorId) {
+    if (devtoolsState.highPerfModeEnabled) {
+      return;
+    }
     this.hooks.callHook("sendInspectorState", { inspectorId, plugin: this.plugin });
   }
   selectInspectorNode(inspectorId, nodeId) {
@@ -3300,12 +3309,18 @@ var DevToolsV6PluginAPI = class {
   }
   // timeline
   now() {
+    if (devtoolsState.highPerfModeEnabled) {
+      return 0;
+    }
     return Date.now();
   }
   addTimelineLayer(options) {
     this.hooks.callHook("timelineLayerAdded", { options, plugin: this.plugin });
   }
   addTimelineEvent(options) {
+    if (devtoolsState.highPerfModeEnabled) {
+      return;
+    }
     this.hooks.callHook("timelineEventAdded", { options, plugin: this.plugin });
   }
   // settings
@@ -3384,7 +3399,7 @@ function callDevToolsPluginSetupFn(plugin, app) {
   setupFn(api);
 }
 function registerDevToolsPlugin(app) {
-  if (target.__VUE_DEVTOOLS_KIT__REGISTERED_PLUGIN_APPS__.has(app))
+  if (target.__VUE_DEVTOOLS_KIT__REGISTERED_PLUGIN_APPS__.has(app) || devtoolsState.highPerfModeEnabled)
     return;
   target.__VUE_DEVTOOLS_KIT__REGISTERED_PLUGIN_APPS__.add(app);
   devtoolsPluginBuffer.forEach((plugin) => {
@@ -3647,6 +3662,9 @@ function onDevToolsClientConnected(fn) {
 init_esm_shims2();
 function toggleHighPerfMode(state) {
   devtoolsState.highPerfModeEnabled = state != null ? state : !devtoolsState.highPerfModeEnabled;
+  if (!state && activeAppRecord.value) {
+    registerDevToolsPlugin(activeAppRecord.value.app);
+  }
 }
 init_esm_shims2();
 init_esm_shims2();

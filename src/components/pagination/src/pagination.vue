@@ -40,7 +40,9 @@ const message = reactive({
 onBeforeMount(() => {
     message.data = prop.message;
 });
-
+defineOptions({
+  name: 'PaginationAll'
+})
 //调用父组件的函数
 const handleCurrentChange = (val) => {
     message.data.pageNum = val;

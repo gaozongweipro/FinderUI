@@ -533,7 +533,9 @@ watch(props.tableConfig, (val) => {
   Object.assign(config, val);
   setState();
 });
-
+defineOptions({
+  name: 'BasicTable'
+})
 defineExpose({
   setRowSelection,
   setCurrentRow,

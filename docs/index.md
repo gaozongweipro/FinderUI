@@ -1,7 +1,7 @@
 ---
 layout: home
 hero:
-  name: My Component Library
+  name: FinderUI
   text: 基于 Element Plus 的 Vue 3 组件库
   tagline: 简单、易用、可定制
   actions:

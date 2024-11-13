@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'My Component Library',
+  title: 'FinderUI',
   description: '基于 Element Plus 的 Vue 3 组件库',
   themeConfig: {
     logo: '/logo.png',
@@ -20,7 +20,12 @@ export default defineConfig({
       '/components/': [
         {
           text: '基础组件',
-          items: [{ text: 'Button 按钮', link: '/components/button' }]
+          items: [
+            { text: 'Button 按钮', link: '/components/button' },
+            { text: 'Dialog 对话框', link: '/components/basic-dialog' },
+            { text: 'Drawer 抽屉', link: '/components/basic-drawer' },
+            { text: 'Form 表单', link: '/components/basic-form' }
+          ]
         }
       ]
     },
