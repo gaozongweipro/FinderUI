@@ -6,42 +6,44 @@
 
 基础的抽屉用法。
 
-<div class="demo-block">
-  <my-button @click="visible = true">打开抽屉</my-button>
-  <basic-drawer
-    v-model="visible"
-    title="基础抽屉"
-    size="30%"
-  >
-    <p>这是一个基础抽屉的内容</p>
-  </basic-drawer>
-</div> 
+## 配置参数
 
-## API
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| title | 抽屉标题 | string | '' |
+| size | 抽屉尺寸 | string | 'middle', 'large' |
+| visible | 抽屉收起展开 | boolean | false |
+| slots | 所有的自定义插槽名称 | array | [] |
+| actionBtnConfig | 操作按钮配置 | object | {} |
+| searchConfig | 搜索组件配置参数 | object | {} |
+| formConfig | 表单参数 | object| {} |
+| tableConfig | 表格配置参数 | object | {} |
+| btnConfig | 搜索栏组件的actionBtnConfigData配置参数 | object | {} |
+| footer | 抽屉地步操作按钮配置 | object | {} |
+| footer.show | 是否展示底部操作按钮 | boolean | true |
+| footer.btns | 底部操作按钮配置参数 | array | [] |
+| footer.btns.class | 操作按钮class | String | '' |
+| footer.btns.customAttribute | 自定义属性 | object | {} |
+| footer.btns.disabled | 是否禁用按钮 | boolean | false |
+| footer.btns.type | 按钮类型 | string | '' |
+| footer.btns.key | 按钮key | string | '' |
+| footer.btns.text | 按钮文本 | string | '' |
+| footer.btns.icon | 按钮图标 | string | '' |
+| footer.btns.click | 按钮点击事件 | function | () => {} |
 
-### 属性
+## Method事件
 
-| 属性名    | 说明       | 类型    | 可选值                | 默认值  |
-|-----------|------------|---------|----------------------|---------|
-| v-model   | 是否显示   | boolean | —                    | false   |
-| title     | 标题       | string  | —                    | —       |
-| size      | 大小       | string  | —                    | 30%     |
-| direction | 打开方向   | string  | rtl/ltr/ttb/btt      | rtl     |
-| withHeader| 是否显示头部| boolean | —                    | true    |
+| 方法名 | 说明 | 参数 | 说明 |
+| --- | --- | --- | --- |
+| show | 打开抽屉 | - | 控制抽屉的展开 |
+| hide | 关闭抽屉 | - | 控制抽屉的关闭 |
+| validate | 抽屉展开关闭回调函数 | callback | 抽屉展开关闭的回调函数 |
+| getSelectData | 获取表格中的选中数据 | boolean | false |
+| getCurrentSelectRow | 获取当前表格中选中行数据 | array | [] |
 
-### 事件
 
-| 事件名  | 说明           | 回调参数 |
-|---------|----------------|----------|
-| open    | 打开时触发     | —        |
-| close   | 关闭时触发     | —        |
-| confirm | 点击确定时触发 | —        |
-| cancel  | 点击取消时触发 | —        |
+## 代码示例
+```
 
-### 插槽
 
-| 插槽名   | 说明           |
-|----------|----------------|
-| default  | 抽屉的内容     |
-| title    | 标题区的内容   |
-| footer   | 底部按钮的内容 |
+```

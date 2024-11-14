@@ -9,7 +9,7 @@ import BasicTable from './table'
 import BasicDrawer from './BasicDrawer'
 import BasicSelectTree from './BasicSelectTree'
 import PaginationAll from './pagination'
-
+import DynamicTree from './DynamicTree'
 const components = [
   Button,
   BasicDialog,
@@ -21,7 +21,8 @@ const components = [
   BasicTable,
   BasicDrawer,
   BasicSelectTree,
-  PaginationAll
+  PaginationAll,
+  DynamicTree
 ]
 
 const install = app => {

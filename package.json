@@ -1,6 +1,6 @@
 {
   "name": "@gaozongweipro/find-ui",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": "dist/find-ui.umd.js",
   "module": "dist/find-ui.es.js",
   "style": "dist/find-ui.css",
