@@ -70,6 +70,12 @@ export default defineConfig({
           vue: 'Vue',
 
           'element-plus': 'ElementPlus'
+        },
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === 'style.css') {
+            return 'find-ui.css'
+          }
+          return assetInfo.name
         }
       }
     }
