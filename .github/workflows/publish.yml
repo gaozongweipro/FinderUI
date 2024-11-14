@@ -35,13 +35,6 @@ jobs:
       - name: Build package
         run: npm run build
 
-      - name: Update version
-        run: |
-          git config --global user.name 'gaozongwei'
-          git config --global user.email '33518794+gaozongweipro@users.noreply.github.com'
-          npm version patch -m "chore(release): %s [skip ci]"
-          git push --follow-tags
-
       - name: Publish to NPM
         run: npm publish --access public
         env:
