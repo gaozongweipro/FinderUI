@@ -31,18 +31,19 @@ jobs:
           rm -rf node_modules
           rm -f package-lock.json
           npm install
-          
+
       - name: Build package
         run: npm run build
 
-      - name: Run semantic-release
+      - name: Update version
+        run: |
+          git config --global user.name 'gaozongweipro'
+          git config --global user.email '33518794+gaozongweipro@users.noreply.github.com'
+          npm version patch -m "chore(release): %s [skip ci]"
+          git push --follow-tags
+
+      - name: Publish to NPM
+        run: npm publish --access public
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
-
-      # - name: Publish package to NPM
-      #   run: npm publish --access public
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
