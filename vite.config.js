@@ -78,7 +78,9 @@ export default defineConfig({
           return assetInfo.name
         }
       }
-    }
+    },
+    cssCodeSplit: false,
+    sourcemap: true
   },
 
   test: {

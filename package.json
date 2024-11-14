@@ -1,13 +1,11 @@
 {
   "name": "@gaozongweipro/find-ui",
-  "version": "1.0.6",
-  "description": "My Vue 3 component library based on Element Plus",
-  "type": "module",
+  "version": "1.0.7",
   "main": "dist/find-ui.umd.js",
   "module": "dist/find-ui.es.js",
+  "style": "dist/find-ui.css",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "scripts": {
     "dev": "vite",
