@@ -10,6 +10,7 @@ import BasicDrawer from './BasicDrawer'
 import BasicSelectTree from './BasicSelectTree'
 import PaginationAll from './pagination'
 import DynamicTree from './DynamicTree'
+import FForm from './FForm'
 const components = [
   Button,
   BasicDialog,
@@ -22,7 +23,8 @@ const components = [
   BasicDrawer,
   BasicSelectTree,
   PaginationAll,
-  DynamicTree
+  DynamicTree,
+  FForm
 ]
 
 const install = app => {
@@ -46,5 +48,6 @@ export {
   BasicTable,
   BasicDrawer,
   BasicSelectTree,
-  PaginationAll
+  PaginationAll,
+  FForm
 }

@@ -26,6 +26,13 @@ export default defineConfig({
             { text: 'Drawer 抽屉', link: '/components/basic-drawer' },
             { text: 'Form 表单', link: '/components/basic-form' }
           ]
+        },
+        {
+          text: '图表组件',
+          items: [
+            { text: 'DrillDownBarChart 下钻柱状图', link: '/components/drill-down-bar-chart' },
+            { text: 'FForm 自定义表单', link: '/components/f-form' }
+          ]
         }
       ]
     },
